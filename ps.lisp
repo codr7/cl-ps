@@ -10,7 +10,7 @@
 
 (defstruct op
   (action nil)
-  (pre nil)t 
+  (pre nil)
   (add nil)
   (rem nil))
 
