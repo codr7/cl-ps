@@ -63,19 +63,6 @@
    (shop-has-money)
    (have-money)))
 
-(define-solver yak-test-solver ()
-  (wax-car (car-needs-waxing have-hose)
-	   (car-waxed)
-	   (car-needs-waxing))
-  (get-new-hose (have-ez-pass)
-		(have-hose))
-  (borrow-ez-pass (return-mooshi-pillow)
-		  (have-ez-pass))
-  (fix-mooshi-pillow (have-yak)
-		     (return-mooshi-pillow))
-  (visit-zoo ()
-	     (have-yak)))
-
 (defun test-school ()
   (multiple-value-bind (ok? actions)
       (school-test-solver '(son-at-home car-needs-battery have-money have-phone-book)
@@ -88,6 +75,19 @@
 		     GIVE-SHOP-MONEY
 		     SHOP-INSTALLS-BATTERY
 		     DRIVE-SON-TO-SCHOOL)))))
+
+(define-solver yak-test-solver ()
+  (wax-car (car-needs-waxing have-hose)
+	   (car-waxed)
+	   (car-needs-waxing))
+  (get-new-hose (have-ez-pass)
+		(have-hose))
+  (borrow-ez-pass (return-mooshi-pillow)
+		  (have-ez-pass))
+  (fix-mooshi-pillow (have-yak)
+		     (return-mooshi-pillow))
+  (visit-zoo ()
+	     (have-yak)))
 
 (defun test-yak ()
   (multiple-value-bind (ok? actions)
