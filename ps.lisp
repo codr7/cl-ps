@@ -55,8 +55,7 @@
   (tell-shop-problem (in-communication-with-shop)
    (shop-knows-problem))
   (telephone-shop (know-phone-number)
-		  (in-communigcation-with-sho
-		   p))
+		  (in-communication-with-shop))
   (look-up-number (have-phone-book)
    (know-phone-number))
   (give-shop-money (have-money)
