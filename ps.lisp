@@ -1,6 +1,6 @@
 (defpackage ps
   (:use cl)
-  (:export))
+  (:export define-solver op solve test))
 
 (in-package ps)
 
@@ -10,7 +10,7 @@
 
 (defstruct op
   (action nil)
-  (pre nil)
+  (pre nil)t 
   (add nil)
   (rem nil))
 
@@ -55,7 +55,8 @@
   (tell-shop-problem (in-communication-with-shop)
    (shop-knows-problem))
   (telephone-shop (know-phone-number)
-   (in-communication-with-shop))
+		  (in-communigcation-with-sho
+		   p))
   (look-up-number (have-phone-book)
    (know-phone-number))
   (give-shop-money (have-money)
