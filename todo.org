@@ -1,0 +1,4 @@
+* Add probabilities to conds 
+** both preconds and add-list
+** replace del-list with negative prob
+*** filter out when solving
